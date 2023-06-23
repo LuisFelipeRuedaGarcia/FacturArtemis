@@ -18,14 +18,21 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `facturartemis`
+-- Base de datos: `
+
+
+
+
+
+
+`
 --
 
 DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `calculoEdad` (IN `edadInicial` INT, IN `edadFinal` INT)   BEGIN
+CREATE DEFINER=`campus`@`localhost` PROCEDURE `calculoEdad` (IN `edadInicial` INT, IN `edadFinal` INT)   BEGIN
 SELECT Apellido, Nombre, year(curdate())-year(fechaNacimiento)  AS  edad FROM empleados
 GROUP BY EmpleadoID
 HAVING (edad>edadInicial AND edad<edadFinal);
