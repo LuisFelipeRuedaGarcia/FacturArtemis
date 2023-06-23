@@ -3,8 +3,8 @@ import Config from "../Config.js";
 const Connection = mysql.createConnection({
     host: Config.Host,
     database: Config.Database,
-    user: "campus"/* Config.User */,
-    password: "campus2023" /* Config.Password */
+    user: Config.User,
+    password: Config.Password
 });
 
 const getConnection = () =>{
