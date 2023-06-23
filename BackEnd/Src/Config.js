@@ -4,7 +4,7 @@ config();
 
 export default{
     Host: process.env.HOSTX,
-    Database: process.env.DATABASEX,
+    Database: "FacturArtemis",
     User: process.env.USERX,
     Password: process.env.PASSWORDX
 }
